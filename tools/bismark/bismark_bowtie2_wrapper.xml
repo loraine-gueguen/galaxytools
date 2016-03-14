@@ -3,8 +3,8 @@
     <description>bisulfite mapper (bowtie2)</description>
     <!--<version_command>bismark version</version_command>-->
     <requirements>
-        <requirement type="package" version="0.1.19">samtools</requirement>
-        <requirement type="package" version="2.2.5">bowtie2</requirement>
+        <requirement type="package" version="1.2">samtools</requirement>
+        <requirement type="package" version="2.2.6">bowtie2</requirement>
     </requirements>
     <stdio>
         <exit_code range="1:" />
