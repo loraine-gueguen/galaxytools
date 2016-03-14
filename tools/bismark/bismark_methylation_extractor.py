@@ -140,49 +140,49 @@ def __main__():
 
 
     if args.cpg_ot:
-        shutil.move( glob(os.path.join( output_dir, '*CpG_OT_*'))[0], args.cpg_ot )
+        shutil.move( glob(os.path.join( output_dir, 'CpG_OT_*'))[0], args.cpg_ot )
     if args.chg_ot:
-        shutil.move( glob(os.path.join( output_dir, '*CHG_OT_*'))[0], args.chg_ot )
+        shutil.move( glob(os.path.join( output_dir, 'CHG_OT_*'))[0], args.chg_ot )
     if args.chh_ot:
-        shutil.move( glob(os.path.join( output_dir, '*CHH_OT_*'))[0], args.chh_ot )
+        shutil.move( glob(os.path.join( output_dir, 'CHH_OT_*'))[0], args.chh_ot )
     if args.cpg_ctot:
-        shutil.move( glob(os.path.join( output_dir, '*CpG_CTOT_*'))[0], args.cpg_ctot )
+        shutil.move( glob(os.path.join( output_dir, 'CpG_CTOT_*'))[0], args.cpg_ctot )
     if args.chg_ctot:
-        shutil.move( glob(os.path.join( output_dir, '*CHG_CTOT_*'))[0], args.chg_ctot )
+        shutil.move( glob(os.path.join( output_dir, 'CHG_CTOT_*'))[0], args.chg_ctot )
     if args.chh_ctot:
-        shutil.move( glob(os.path.join( output_dir, '*CHH_CTOT_*'))[0], args.chh_ctot )
+        shutil.move( glob(os.path.join( output_dir, 'CHH_CTOT_*'))[0], args.chh_ctot )
     if args.cpg_ob:
-        shutil.move( glob(os.path.join( output_dir, '*CpG_OB_*'))[0], args.cpg_ob )
+        shutil.move( glob(os.path.join( output_dir, 'CpG_OB_*'))[0], args.cpg_ob )
     if args.chg_ob:
-        shutil.move( glob(os.path.join( output_dir, '*CHG_OB_*'))[0], args.chg_ob )
+        shutil.move( glob(os.path.join( output_dir, 'CHG_OB_*'))[0], args.chg_ob )
     if args.chh_ob:
-        shutil.move( glob(os.path.join( output_dir, '*CHH_OB_*'))[0], args.chh_ob )
+        shutil.move( glob(os.path.join( output_dir, 'CHH_OB_*'))[0], args.chh_ob )
     if args.cpg_ctob:
-        shutil.move( glob(os.path.join( output_dir, '*CpG_CTOB_*'))[0], args.cpg_ctob )
+        shutil.move( glob(os.path.join( output_dir, 'CpG_CTOB_*'))[0], args.cpg_ctob )
     if args.chg_ctob:
-        shutil.move( glob(os.path.join( output_dir, '*CHG_CTOB_*'))[0], args.chg_ctob )
+        shutil.move( glob(os.path.join( output_dir, 'CHG_CTOB_*'))[0], args.chg_ctob )
     if args.chh_ctob:
-        shutil.move( glob(os.path.join( output_dir, '*CHH_CTOB_*'))[0], args.chh_ctob )
+        shutil.move( glob(os.path.join( output_dir, 'CHH_CTOB_*'))[0], args.chh_ctob )
 
     # context-dependent methylation output files
     if args.cpg_context:
-        shutil.move( glob(os.path.join( output_dir, '*CpG_context_*'))[0], args.cpg_context )
+        shutil.move( glob(os.path.join( output_dir, 'CpG_context_*'))[0], args.cpg_context )
     if args.chg_context:
-        shutil.move( glob(os.path.join( output_dir, '*CHG_context_*'))[0], args.chg_context )
+        shutil.move( glob(os.path.join( output_dir, 'CHG_context_*'))[0], args.chg_context )
     if args.chh_context:
-        shutil.move( glob(os.path.join( output_dir, '*CHH_context_*'))[0], args.chh_context )
+        shutil.move( glob(os.path.join( output_dir, 'CHH_context_*'))[0], args.chh_context )
 
     if args.non_cpg_context:
-        shutil.move( glob(os.path.join( output_dir, '*Non_CpG_context_*'))[0], args.non_cpg_context )
+        shutil.move( glob(os.path.join( output_dir, 'Non_CpG_context_*'))[0], args.non_cpg_context )
 
     if args.non_cpg_context_ot:
-        shutil.move( glob(os.path.join( output_dir, '*Non_CpG_OT_*'))[0], args.non_cpg_context_ot )
+        shutil.move( glob(os.path.join( output_dir, 'Non_CpG_OT_*'))[0], args.non_cpg_context_ot )
     if args.non_cpg_context_ctot:
-        shutil.move( glob(os.path.join( output_dir, '*Non_CpG_CTOT_*'))[0], args.non_cpg_context_ctot )
+        shutil.move( glob(os.path.join( output_dir, 'Non_CpG_CTOT_*'))[0], args.non_cpg_context_ctot )
     if args.non_cpg_context_ob:
-        shutil.move( glob(os.path.join( output_dir, '*Non_CpG_OB_*'))[0], args.non_cpg_context_ob )
+        shutil.move( glob(os.path.join( output_dir, 'Non_CpG_OB_*'))[0], args.non_cpg_context_ob )
     if args.non_cpg_context_ctob:
-        shutil.move( glob(os.path.join( output_dir, '*Non_CpG_CTOB_*'))[0], args.non_cpg_context_ctob )
+        shutil.move( glob(os.path.join( output_dir, 'Non_CpG_CTOB_*'))[0], args.non_cpg_context_ctob )
 
 
 
