@@ -42,7 +42,8 @@ def __main__():
         help='The forward reads file in Sanger FASTQ or FASTA format.' )
     parser.add_argument( '-2', '--mate2', dest='mate2',
         help='The reverse reads file in Sanger FASTQ or FASTA format.' )
-    parser.add_argument( '--sort-bam', dest='sort_bam', action="store_true" )
+    parser.add_argument( '--sort-bam-by-position', dest='sort_bam_by_position', action="store_true" )
+    parser.add_argument( '--sort-bam-by-name', dest='sort_bam_by_name', action="store_true" )
 
     parser.add_argument( '--output-unmapped-reads', dest='output_unmapped_reads',
         help='Additional output file with unmapped reads (single-end).' )
@@ -339,8 +340,11 @@ def __main__():
         bam_path = "%s" % tmp_res
 
         if os.path.exists( bam_path ):
-            if args.sort_bam:
-                cmd = 'samtools sort -@ %s %s sorted_bam' % (args.num_threads, bam_path)
+            if args.sort_bam_by_position or args.sort_bam_by_name:
+                cmd = 'samtools sort'
+                if args.sort_bam_by_name:
+                    cmd = '%s -n' % (cmd)
+                cmd = '%s -@ %s %s sorted_bam' % (cmd, args.num_threads, bam_path)
                 proc = subprocess.Popen( args=shlex.split( cmd ) )
                 returncode = proc.wait()
                 if returncode != 0:

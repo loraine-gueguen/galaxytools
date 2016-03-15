@@ -78,8 +78,10 @@
             -X $singlePaired.maxInsert
         #end if
 
-        #if $sort_bam:
-            --sort-bam
+        #if str($sort_bam) == "by_chromosomal_position":
+            --sort-bam-by-position
+        #elif str($sort_bam) == "by_read_name":
+            --sort-bam-by-name
         #end if
 
         ## for now hardcode the value for the required memory per thread in --best mode
@@ -189,7 +191,11 @@
             </when>
         </conditional>
 
-        <param name="sort_bam" type="boolean" truevalue="true" falsevalue="false" checked="False" label="Sort BAM file by chromosomal position (not compatibile with methylation extractor)"/>
+        <param name="sort_bam" type="select" label="Sort BAM file">
+              <option value="no">No</option>
+              <option value="by_chromosomal_position">Sort by chromosomal position (not compatibile with methylation extractor)</option>
+              <option value="by_read_name">Sort by read name</option>
+        </param>
 
         <conditional name="params">
             <param name="settingsType" type="select" label="Bismark settings to use" help="You can use the default settings or set custom values for any of Bismark's parameters.">
